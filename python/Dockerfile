@@ -1,4 +1,6 @@
 FROM ubuntu:14.04
+MAINTAINER Garry Cairns
+ENV REFRESHED_AT 2014-12-20
 
 # update packages and prepare to build software
 RUN apt-get update
