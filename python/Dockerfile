@@ -1,10 +1,10 @@
 FROM ubuntu:14.04
 MAINTAINER Garry Cairns
-ENV REFRESHED_AT 2014-12-20
+ENV REFRESHED_AT 2015-07-01
 
 # update packages and prepare to build software
 RUN ["apt-get", "update"]
-RUN ["apt-get", "-y", "install", "build-essential", "vim", "git", "wget"]
+RUN ["apt-get", "-y", "install", "build-essential", "emacs", "git", "wget"]
 RUN ["locale-gen", "en_GB.UTF-8"]
 
 # install latest python
@@ -22,4 +22,4 @@ WORKDIR /home/python
 RUN ["touch", ".bashrc"]
 
 # uncomment the line below to use container as a non-root user
-# USER python:python
+USER python:python
